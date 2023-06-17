@@ -8,5 +8,5 @@ urlpatterns = [
     path('book/', views.book, name="book"),
     # Add the remaining URL path configurations here
     path('menu/', views.menu, name="menu"),
-    path('menu/<int:menu_id>/', views.menu_detail, name="menu_detail"),
+    path('menu/<int:pk>/', views.menu_item, name="menu_item"),
 ]

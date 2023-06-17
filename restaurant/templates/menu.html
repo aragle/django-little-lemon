@@ -8,7 +8,8 @@
     {% for menu in menu_items %}
     <p>
         <span class="menu-name">
-            <a href="/menu/{{menu.id}}">
+            <!-- <a href="/menu/{{menu.id}}"> -->
+            <a href="{% url 'menu_item' pk=menu.id %}">
                 {{ menu.name }}
             </a>
         </span>

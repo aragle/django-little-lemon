@@ -31,7 +31,9 @@ def menu(request):
     return render(request, 'menu.html', context)
 
 
-def menu_detail(request, menu_id):
-    menu_item = Menu.objects.get(id=menu_id)
-    context = {'menu_item': menu_item}
-    return render(request, 'menu_detail.html', context)
+def menu_item(request, pk=None):
+    if pk:
+        menu_item = Menu.objects.get(pk=pk)
+    else:
+        menu_item = ""
+    return render(request, 'menu_item.html', {"menu_item": menu_item})
