@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section>
+    <article>
+        <h1>Menu item</h1>
+        <a href="/">Home</a> / <a href="/menu">Menu</a> / {{ menu_item.name }}
+
+        <div class="row">
+            <div class="column">
+                <p>
+                <div class="menu-name">
+                    <h2>{{ menu_item.name }}</h2>
+                </div>
+                </p>
+                <p>
+                    {{ menu_item.description }}
+                </p>
+                <p>
+                <div class="menu-price">
+                    Price: ${{ menu_item.price }}
+                </div>
+                </p>
+            </div>
+            <div class="column videowrap">
+                <img class="frame" src="/restaurant/static/img/menu_items/{{menu_item.name}}.jpg" width="100%"
+                    height="600px" alt="{{ menu_item.name }}" />
+            </div>
+        </div>
+    </article>
+</section>
+
+
+{% endblock %}
